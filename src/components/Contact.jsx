@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiSend } from 'react-icons/fi';
 import { useState } from 'react';
+import { socialLinks } from '../constants';
 
 const Contact = () => {
   const { mode } = useSelector((state) => state.theme);
@@ -58,9 +59,8 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className={`w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${
-                      mode === 'dark' ? 'text-white' : 'text-gray-900'
-                    }`}
+                    className={`w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${mode === 'dark' ? 'text-white' : 'text-gray-900'
+                      }`}
                     placeholder="Your Name"
                   />
                 </div>
@@ -79,9 +79,8 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className={`w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${
-                      mode === 'dark' ? 'text-white' : 'text-gray-900'
-                    }`}
+                    className={`w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${mode === 'dark' ? 'text-white' : 'text-gray-900'
+                      }`}
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -100,9 +99,8 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className={`w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all resize-none ${
-                      mode === 'dark' ? 'text-white' : 'text-gray-900'
-                    }`}
+                    className={`w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all resize-none ${mode === 'dark' ? 'text-white' : 'text-gray-900'
+                      }`}
                     placeholder="Your message..."
                   ></textarea>
                 </div>
@@ -124,7 +122,7 @@ const Contact = () => {
               <h3 className={`text-2xl font-bold mb-6 ${mode === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 Contact Information
               </h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg">
@@ -135,12 +133,11 @@ const Contact = () => {
                       Email
                     </h4>
                     <a
-                      href="mailto:your.email@example.com"
-                      className={`hover:text-indigo-500 transition-colors ${
-                        mode === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                      }`}
+                      href={`mailto:${socialLinks.email}`}
+                      className={`hover:text-indigo-500 transition-colors ${mode === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                        }`}
                     >
-                      your.email@example.com
+                      {socialLinks.email}
                     </a>
                   </div>
                 </div>
@@ -151,10 +148,10 @@ const Contact = () => {
               <h3 className={`text-2xl font-bold mb-6 ${mode === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 Connect With Me
               </h3>
-              
+
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href={socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass rounded-lg hover:scale-110 hover:shadow-lg transition-all group"
@@ -163,7 +160,7 @@ const Contact = () => {
                   <FiGithub className="w-6 h-6 group-hover:text-indigo-500 transition-colors" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass rounded-lg hover:scale-110 hover:shadow-lg transition-all group"
@@ -171,7 +168,7 @@ const Contact = () => {
                 >
                   <FiLinkedin className="w-6 h-6 group-hover:text-indigo-500 transition-colors" />
                 </a>
-                <a
+                {/* <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -179,7 +176,7 @@ const Contact = () => {
                   aria-label="Twitter"
                 >
                   <FiTwitter className="w-6 h-6 group-hover:text-indigo-500 transition-colors" />
-                </a>
+                </a> */}
               </div>
             </div>
 

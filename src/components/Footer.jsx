@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowUp } from 'react-icons/fi';
+import { socialLinks } from '../constants';
 
 const Footer = () => {
   const { mode } = useSelector((state) => state.theme);
@@ -53,7 +54,7 @@ const Footer = () => {
             </h4>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass rounded-lg hover:scale-110 hover:shadow-lg transition-all"
@@ -62,7 +63,7 @@ const Footer = () => {
                 <FiGithub className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass rounded-lg hover:scale-110 hover:shadow-lg transition-all"
@@ -70,17 +71,17 @@ const Footer = () => {
               >
                 <FiLinkedin className="w-5 h-5" />
               </a>
-              <a
-                href="https://twitter.com"
+              {/* <a
+                href={socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass rounded-lg hover:scale-110 hover:shadow-lg transition-all"
                 aria-label="Twitter"
               >
                 <FiTwitter className="w-5 h-5" />
-              </a>
+              </a> */}
               <a
-                href="mailto:your.email@example.com"
+                href={`mailto:${socialLinks.email}`}
                 className="p-3 glass rounded-lg hover:scale-110 hover:shadow-lg transition-all"
                 aria-label="Email"
               >

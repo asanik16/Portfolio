@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from 'react-icons/fi';
+import { socialLinks } from '../constants';
 
 const Hero = () => {
   const { mode } = useSelector((state) => state.theme);
@@ -18,7 +19,7 @@ const Hero = () => {
     >
       {/* Animated gradient background */}
       <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-20"></div>
-      
+
       {/* Floating shapes */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
       <div className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
@@ -46,7 +47,7 @@ const Hero = () => {
           <p className={`text-xl md:text-2xl mb-4 ${mode === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
             & Aspiring Computer Science Researcher
           </p>
-          
+
           <p className={`text-lg md:text-xl max-w-3xl mx-auto mb-12 ${mode === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
             Passionate about building innovative solutions and exploring the frontiers of
             computer science through research and development.
@@ -71,7 +72,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-6 justify-center mb-12">
             <a
-              href="https://github.com"
+              href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass rounded-full hover:scale-110 hover:shadow-glow transition-all duration-300"
@@ -80,7 +81,7 @@ const Hero = () => {
               <FiGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass rounded-full hover:scale-110 hover:shadow-glow transition-all duration-300"
@@ -89,7 +90,7 @@ const Hero = () => {
               <FiLinkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href={`mailto:${socialLinks.email}`}
               className="p-3 glass rounded-full hover:scale-110 hover:shadow-glow transition-all duration-300"
               aria-label="Email"
             >
