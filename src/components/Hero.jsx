@@ -29,7 +29,7 @@ const Hero = () => {
           {/* Avatar placeholder */}
           <div className="mb-8 flex justify-center">
             <div className="w-32 h-32 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-5xl font-bold text-white shadow-xl">
-              CS
+              AS
             </div>
           </div>
 

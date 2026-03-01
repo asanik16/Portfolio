@@ -63,7 +63,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('home')}
               className="text-2xl font-bold font-display text-gradient hover:scale-105 transition-transform"
             >
-              Atik Shahriar Anik Portfolio
+              Atik Shahriar Anik
             </button>
           </div>
 

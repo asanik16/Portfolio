@@ -21,6 +21,14 @@ const About = () => {
           <div className="animate-slideInLeft">
             <div className="glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
               <h3 className={`text-2xl font-bold mb-4 ${mode === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                Education
+              </h3>
+              <p className={`text-lg mb-4 ${mode === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+                I completed my undergraduate studies from <a href="https://www.cuet.ac.bd/" target="_blank" rel="noopener noreferrer" className="text-gradient hover:underline">Chittagong University of Engineering and Technology (CUET)</a> in 2023 with a degree in Computer Science and Engineering.
+                My CGPA is 3.70 out of 4.00. In my 4 years of undergraduate life, on top of academic studies, I have done competitive programming.
+                I practiced data structures and algorithms regularly and participated in several national programming contests.
+              </p>
+              <h3 className={`text-2xl font-bold mb-4 ${mode === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 Software Engineer & Researcher
               </h3>
               <p className={`text-lg mb-4 ${mode === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -35,7 +43,7 @@ const About = () => {
               </p>
               <p className={`text-lg ${mode === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                 When I'm not coding or doing research, you can find me exploring new technologies,
-                contributing to open-source projects, or diving deep into academic papers.
+                reading books, contributing to open-source projects, or diving deep into academic papers.
               </p>
             </div>
           </div>
